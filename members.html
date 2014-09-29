@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+		<link rel ="stylesheet" type="text/css" href="assets/foundation-icons/foundation-icons.css" />
+		<link rel="shortcut icon" href="assets/tce_browser_icon.ico" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="main-header">
+				<div id="home"></div>
+				<div class="main-header-wrap">
+					<img src="assets/headerlogoblack.jpg" />
+				</div>
+			</div>
+		<!-- HEADER MARKUP -->
+			<div class="header-wrap">
+				<ul class="header">
+					<li class="header-item clearfix">
+						<a id="header-link" href="/"><span>Home</span></a>
+					</li>
+					<li class="header-item clearfix">
+						<a id="header-link" href="/#about"><span>About</span></a>
+					</li>
+					<li class="header-item clearfix">
+						<a id="header-link" href="/members"><span>Our Members</span></a>
+					</li>
+					<li class="header-item clearfix">
+						<a id="header-link" href="/gallery"><span>Gallery</span></a>
+					</li>
+					<li class="header-item clearfix">
+						<a id="header-link" href="/#contact"><span>Contact</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="header-placeholder"></div>
+			<!-- END HEADER MARKUP -->
+
+			<!-- BODY MARKUP -->
+			<div class="content-wrap">
+				<div class="content">
+					<div class="members-wrap page-section">
+
+					</div>
+				</div>
+			</div>
+			<!-- END BODY MARKUP -->
+		</div>
+	</body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+<script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+<script>
+
+	(function($) {
+		
+		$( '.header-item' ).hover(function() {
+			$( this ).animate({ 'background-color': '#9C9C9C' }, 200);
+		}, function() {
+			$( this ).animate({ 'background-color': '#000' }, 200);
+		});
+
+	})(jQuery)
+
+</script>
+
+<script>
+
+	(function($) {
+		$( document ).ready(function() {
+			$( '.main-banner' ).slick({
+				slidesToShow: 1,
+				autoplay: true,
+				infinite: true,
+				autoplaySpeed: 4000
+			});
+		});
+	})(jQuery)
+
+</script>
+
+<script>
+
+	(function($) {
+		$( window ).scroll(function() {
+			var height = $( 'body' ).height();
+			var scrollTop = $( window ).scrollTop();
+			if (scrollTop > $( '.main-header-wrap' ).height()) {
+				$( '.header-wrap' ).css({ 'position' : 'fixed', 'top' : '0' });
+				$( '.header-placeholder' ).show();
+			} else {
+				$( '.header-wrap' ).css({ 'position' : 'relative', 'top' : '0' });
+				$( '.header-placeholder' ).hide();
+			}
+		});
+	})(jQuery)
+
+</script>
+
+<script>
+
+	(function($) {
+		$(document).ready(function(){
+			$('a[href^="#"]').on('click',function (e) {
+			    e.preventDefault();
+
+			    var target = this.hash,
+			    $target = $(target);
+
+			    $('html, body').stop().animate({
+			        'scrollTop': $target.offset().top
+			    }, 1000, 'easeInOutQuint', function () {
+			        window.location.hash = target;
+			    });
+			});
+		});
+	})(jQuery)
+
+</script>

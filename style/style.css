@@ -1,0 +1,71 @@
+
+body { font-family: 'Open Sans', sans-serif; font-weight: normal; background-color: #858585;}
+
+body, html, ul, li, a, h1, h2, h3, h4, h5, h6 { padding: 0; margin: 0; text-decoration: none; font-weight: normal; list-style: none; }
+.container { width: 100%; height: 100%; overflow: auto; }
+.content-wrap { max-width: 1048px; margin: 0 auto; overflow: auto; background-color: #fff; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.content { width: 100%; overflow: auto; }
+h1 { font-size: 3em; color: #fff; }
+h2 { font-size: 2em; color: #fff; }
+h3 { font-size: 1em; color: #fff; }
+
+/*=============== HEADER ===============*/
+.header-wrap { height: 60px; width: 100%; top: 0; position: relative; z-index: 9999; opacity: 0.8; background-color: #000; }
+.header { max-width: 1048px; height: 60px; position: relative; top: 0; font-weight: lighter; margin: 0 auto; }
+.header li { position: relative; float: left; color: #FFF; width: 20%; text-align: center; height: 100%; }
+.header li:hover { cursor: pointer; }
+.header li a { color: #fff; width: 100%; height: 100%; font-size: 0.9rem; position: absolute; top: 0; right: 0; bottom: 0; left: 0; text-transform: uppercase; }
+.header li a span { position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; width: 100%; height: 30%; }
+.header-placeholder { display: none; height: 60px; position: relative; }
+/*======================================*/
+
+/*=============== MAIN BANNER ===============*/
+.main-banner { width: 100%; position: relative; }
+.main-banner .banner-slide { width: 100%; text-align: center; }
+.main-banner .banner-slide img { width: 100%; }
+.main-banner .slick-next,
+.main-banner .slick-prev { display: none !important; }
+.main-banner.slick-slider { margin-bottom: 0; }
+/*===========================================*/
+
+/*=============== MAIN HEADER ===============*/
+.main-header { position: relative; text-align: center; color: #fff; height: 300px; background-color: #000; }
+.main-header .main-header-wrap { height: 100%; }
+.main-header .main-header-wrap img { height: 100%; }
+/*===========================================*/
+
+/*=============== PAGE SECTION ===============*/
+.page-section { display: block; }
+.page-section h2 { text-align: center; color: #000; margin: 5% 0; text-transform: uppercase; }
+.page-section h3 { color : #000; font-weight: bold; text-align: center; }
+.page-section p { text-align: justify; }
+.page-section .page-jump { display: block; position: relative; top: -60px; visibility: hidden; }
+/*=============================================*/
+
+/*=============== PAGE SECTION DIVIDER ===============*/
+.page-section-divider { width: 60%; height: 1px; margin: 0 auto; background-color: #000; margin-top: 5%; }
+/*====================================================*/
+
+/*=============== ABOUT SECTION ===============*/
+.about-wrap .about p { text-align: justify; }
+.about-wrap .about-row { width: 100%; }
+.about-wrap .about#left { padding-left: 5%; float: left; width: 44%; }
+.about-wrap .about#right { padding-right: 5%; float: right; width: 44%; }
+.about-wrap .about-spacer { float: left; width: 2%; }
+/*=============================================*/
+
+/*=============== CONTACT SECTION ===============*/
+.contact-wrap .contact-info { float: left; width: 100%; background-color: #000; }
+.contact-wrap .contact-info ul { width: 100%; padding: 5% 0; }
+.contact-wrap .contact-info ul li { position: relative; float: left; width: 200px; width: 25%; color: #fff; text-align: center; }
+.contact-wrap .contact-info ul li i { width: 100%; text-align: center; display: inline-block; color: #fff; font-size: 50px; }
+.contact-wrap .contact-info ul li a:visited { color: #000; }
+.contact-wrap h2 { margin-bottom: 2%; }
+.contact-wrap p { text-align: center; }
+/*===============================================*/
+
+/*=============== MEMBERS SECTION ===============*/
+.members-wrap {  }
+/*===============================================*/
